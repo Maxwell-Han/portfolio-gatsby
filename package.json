@@ -1,14 +1,9 @@
 {
-  "name": "gatsby-starter-resume",
+  "name": "my-portfolio",
   "version": "0.0.1",
-  "description": "Gatsby.js V2 starter template based on Resume by startbootstrap",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-resume.git"
-  },
+  "description": "Portfolio site made with Gatsby",
   "author": {
-    "name": "Anubhav Srivastava",
-    "email": "anubhav.srivastava00@gmail.com"
+    "name": "Max Han"
   },
   "dependencies": {
     "gatsby": "^2.20.2",
@@ -34,7 +29,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
     "prettier": "^1.17.0",
     "rimraf": "^3.0.2"
   },
@@ -43,9 +37,5 @@
     "gatsby-starter",
     "gatsby-starter-resume"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/anubhavsrivastava/gatsby-starter-resume/issues"
-  },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-resume#readme"
+  "license": "MIT"
 }
