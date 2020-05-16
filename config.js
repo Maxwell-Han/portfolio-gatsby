@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Gatsby Starter Resume', // <title>
+  siteTitle: 'Max Han Portfolio', // <title>
   manifestName: 'Resume',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',
@@ -23,12 +23,12 @@ module.exports = {
       url: 'https://linkedin.com/in/maxwellhan/',
     },
     {
-      icon: 'fa-twitter',
+      icon: 'far fa-file',
       name: 'Twitter',
       url: 'https://twitter.com/',
     },
     {
-      icon: 'fa-facebook-f',
+      icon: 'far fa-envelope',
       name: 'Facebook',
       url: 'https://facebook.com/',
     },
