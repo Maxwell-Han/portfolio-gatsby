@@ -1,7 +1,7 @@
 const config = require('./config');
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
 if (process.env.NODE_ENV !== 'production') require('./secrets');
-console.log('PROCESS.ENV IS ', process.env.NODE_ENV)
-console.log(process.env.CONTENT_DELIVERY_API_KEY)
+
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
