@@ -7,6 +7,8 @@ import Sidebar from '../components/Sidebar';
 import config from '../../config';
 
 const IndexPage = () => {
+  const data = useStaticQuery(getImages);
+  console.log(data);
   return (
     <Layout>
       <Sidebar />
@@ -65,9 +67,12 @@ const IndexPage = () => {
                 <span className="text-primary">August 2002 - May 2006</span>
               </div>
             </div>
+            <Image fixed={data.fixed.childImageSharp.fixed} />
           </div>
         </section>
-
+        <div>
+          <Image fluid={data.fluid.childImageSharp.fluid} />
+        </div>
         <hr className="m-0" />
 
         <section
@@ -161,11 +166,6 @@ const IndexPage = () => {
               large amount of my free time exploring the latest technology
               advancements in the front-end web development world.
             </p>
-            <Image
-              fluid={project.image.fluid}
-              alt={project.title}
-              style={{ height: '30vh' }}
-            />
           </div>
         </section>
       </div>
@@ -173,5 +173,22 @@ const IndexPage = () => {
   );
 };
 
+const getImages = graphql`
+  {
+    fixed: file(relativePath: { eq: "meeting-screen.png" }) {
+      childImageSharp {
+        fixed {
+          ...GatsbyImageSharpFixed_tracedSVG
+        }
+      }
+    }
+    fluid: file(relativePath: { eq: "minesweeper-screen.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`;
 export default IndexPage;
-

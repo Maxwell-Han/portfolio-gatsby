@@ -1,4 +1,5 @@
 const config = require('./config');
+const contentKeys = require('./secrets');
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -34,6 +35,13 @@ module.exports = {
       options: {
         name: `gifs`,
         path: `${__dirname}/src/assets/gifs/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `qyqrc6zt88co`,
+        accessToken: process.env.CONTENT_DELIVERY_API_KEY,
       },
     },
     'gatsby-plugin-sass',
