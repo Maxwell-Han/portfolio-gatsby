@@ -5,10 +5,10 @@ import Layout from '../components/Layout';
 // import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import config from '../../config';
+import QueryTest from './queryTest';
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   const data = useStaticQuery(getImages);
-  console.log(data);
   return (
     <Layout>
       <Sidebar />
@@ -167,7 +167,9 @@ const IndexPage = () => {
               advancements in the front-end web development world.
             </p>
           </div>
+
         </section>
+        <QueryTest />
       </div>
     </Layout>
   );
@@ -191,4 +193,6 @@ const getImages = graphql`
     }
   }
 `;
+
+
 export default IndexPage;
