@@ -9,7 +9,7 @@ const Projects = () => {
   console.log('projects are ', projects);
   return (
     <div>
-      <h2 className="mb-5">Projects</h2>
+      <h2 className="mb-5 text-center">Projects</h2>
       <section className="projects-section" id="projects">
         {projects.map((proj, i) => {
           return (
