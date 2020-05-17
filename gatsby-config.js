@@ -35,10 +35,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `qyqrc6zt88co`,
-        accessToken:
-          process.env.NODE_ENV !== 'production'
-            ? process.env.CONTENT_DELIVERY_API_KEY
-            : CONTENT_DELIVERY_API_KEY,
+        accessToken: process.env.CONTENT_DELIVERY_API_KEY
       },
     },
     'gatsby-plugin-sass',
