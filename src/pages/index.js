@@ -1,6 +1,6 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+// import { useStaticQuery, graphql } from 'gatsby';
+// import Image from 'gatsby-image';
 import Layout from '../components/Layout';
 // import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
@@ -8,7 +8,7 @@ import config from '../../config';
 import QueryTest from './queryTest';
 
 const IndexPage = (props) => {
-  const data = useStaticQuery(getImages);
+
   return (
     <Layout>
       <Sidebar />
@@ -67,11 +67,9 @@ const IndexPage = (props) => {
                 <span className="text-primary">August 2002 - May 2006</span>
               </div>
             </div>
-            <Image fixed={data.fixed.childImageSharp.fixed} />
           </div>
         </section>
         <div>
-          <Image fluid={data.fluid.childImageSharp.fluid} />
         </div>
         <hr className="m-0" />
 
@@ -174,25 +172,6 @@ const IndexPage = (props) => {
     </Layout>
   );
 };
-
-const getImages = graphql`
-  {
-    fixed: file(relativePath: { eq: "meeting-screen.png" }) {
-      childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed_tracedSVG
-        }
-      }
-    }
-    fluid: file(relativePath: { eq: "minesweeper-screen.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-  }
-`;
 
 
 export default IndexPage;

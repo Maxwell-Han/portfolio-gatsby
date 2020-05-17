@@ -1,11 +1,12 @@
 const config = require('./config');
-const contentKeys = require('./secrets');
-
+if (process.env.NODE_ENV !== 'production') require('./secrets');
+console.log('PROCESS.ENV IS ', process.env.NODE_ENV)
+console.log(process.env.CONTENT_DELIVERY_API_KEY)
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
-    author: `${config.firstName} ${config.lastName}`
+    author: `${config.firstName} ${config.lastName}`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -31,17 +32,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `gifs`,
-        path: `${__dirname}/src/assets/gifs/`,
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `qyqrc6zt88co`,
-        accessToken: process.env.CONTENT_DELIVERY_API_KEY,
+        accessToken:
+          process.env.NODE_ENV !== 'production'
+            ? process.env.CONTENT_DELIVERY_API_KEY
+            : CONTENT_DELIVERY_API_KEY,
       },
     },
     'gatsby-plugin-sass',
