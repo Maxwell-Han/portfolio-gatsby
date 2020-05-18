@@ -13,7 +13,7 @@ module.exports = {
   // social
   socialLinks: [
     {
-      icon: 'fa-github',
+      icon: 'fa-github-square',
       name: 'Github',
       url: 'https://github.com/Maxwell-Han',
     },
@@ -29,11 +29,10 @@ module.exports = {
     },
     {
       icon: 'far fa-envelope',
-      name: 'Facebook',
-      url: 'https://facebook.com/',
+      name: 'Email',
+      url: 'mailto:maxwell.h.han@gmail.com',
     },
   ],
   email: 'maxwell.h.han@gmail.com',
-  phone: '000-00000',
   address: 'NYC',
 };

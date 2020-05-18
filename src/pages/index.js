@@ -24,7 +24,7 @@ const IndexPage = props => {
               {config.firstName}
               <PulseText
                 text="Han"
-                duration={4250}
+                duration={4150}
                 iterationCount={99999}
                 reverse
               >
@@ -37,7 +37,7 @@ const IndexPage = props => {
               {config.socialLinks.map(social => {
                 const { icon, url } = social;
                 return (
-                  <a key={url} href={url}>
+                  <a key={url} href={url} target="_blank" rel="noreferrer">
                     <i className={`fab ${icon}`}></i>
                   </a>
                 );
