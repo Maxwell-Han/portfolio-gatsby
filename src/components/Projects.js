@@ -8,7 +8,7 @@ const Projects = () => {
   const {
     allContentfulProjects: { nodes: projects },
   } = useStaticQuery(query);
-  console.log('projects are ', projects);
+  // console.log('projects are ', projects);
 
   const updateView = e => {
     setIsShown({
