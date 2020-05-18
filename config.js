@@ -24,8 +24,8 @@ module.exports = {
     },
     {
       icon: 'far fa-file',
-      name: 'Twitter',
-      url: 'https://twitter.com/',
+      name: 'Resume',
+      url: '//assets.ctfassets.net/qyqrc6zt88co/7zF1JK2ZMPcpkQCKURPaYt/f178d8bbe5f12addf9280f2fb9a73975/MaxHanResume.pdf',
     },
     {
       icon: 'far fa-envelope',

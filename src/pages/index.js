@@ -1,6 +1,5 @@
 import React from 'react';
-// import { useStaticQuery, graphql } from 'gatsby';
-// import Image from 'gatsby-image';
+import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 // import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
@@ -11,6 +10,10 @@ import QueryTest from './queryTest';
 import PulseText from 'react-pulse-text';
 
 const IndexPage = props => {
+  const {
+    allContentfulAsset: { nodes },
+  } = useStaticQuery(query);
+  console.log('query result is ', nodes);
   return (
     <Layout>
       <Sidebar />
@@ -54,8 +57,26 @@ const IndexPage = props => {
 
         <About />
       </div>
+      <footer id="footer" class="wrapper style1-alt">
+        <ul>Made with GatsbyJS  &copy; 2020 Max Han. All rights reserved.</ul>
+      </footer>
     </Layout>
   );
 };
+
+export const query = graphql`
+  {
+    allContentfulAsset(filter: { title: { eq: "My Resume" } }) {
+      nodes {
+        title
+        file {
+          url
+          fileName
+          contentType
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

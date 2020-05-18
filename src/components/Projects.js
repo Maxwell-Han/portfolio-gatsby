@@ -26,7 +26,7 @@ const Projects = () => {
               </p>
               <a href={proj.github}>
                 <p>
-                  <i class="fab fa-github-square dev-icons"></i>&ensp;View code
+                  <i class="fab fa-github-square"></i>&ensp;View code
                 </p>
               </a>
             </section>
