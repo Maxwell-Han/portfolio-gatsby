@@ -78,3 +78,18 @@ p.lead {
     }
   }
 }
+
+@keyframes blink-animation {
+  50% {
+      opacity: 0;
+  }
+}
+
+.text-with-cursor::before {
+  content: '|';
+  color: gray;
+  display: inline-block;
+  animation-name: blink-animation;
+  animation-duration: 1350ms;
+  animation-iteration-count: infinite;
+}
