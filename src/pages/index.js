@@ -1,12 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/Layout';
-// import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import Projects from '../components/Projects';
 import About from '../components/About';
 import config from '../../config';
-import QueryTest from './queryTest';
 import PulseText from 'react-pulse-text';
 
 const IndexPage = props => {
