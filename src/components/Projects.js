@@ -7,6 +7,7 @@ const Projects = () => {
     allContentfulProjects: { nodes: projects },
   } = useStaticQuery(query);
   console.log('projects are ', projects);
+
   return (
     <div>
       <h2 className="mb-5 text-center">Projects</h2>
