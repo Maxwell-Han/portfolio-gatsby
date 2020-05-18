@@ -57,7 +57,7 @@ const IndexPage = props => {
 
         <About />
       </div>
-      <footer id="footer" class="wrapper style1-alt">
+      <footer id="footer" class="wrapper style1-alt text-center">
         <ul>Made with GatsbyJS  &copy; 2020 Max Han. All rights reserved.</ul>
       </footer>
     </Layout>

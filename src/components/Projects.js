@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 const Projects = () => {
+  const [imageHover, setIsShown] = useState({});
   const {
     allContentfulProjects: { nodes: projects },
   } = useStaticQuery(query);
   console.log('projects are ', projects);
+
+  const updateView = e => {
+    setIsShown({
+      ...imageHover,
+      [e.currentTarget.id]: true,
+    });
+  };
+  const revertView = e => {
+    setIsShown({
+      ...imageHover,
+      [e.currentTarget.id]: false,
+    });
+  };
 
   return (
     <div>
@@ -14,12 +29,27 @@ const Projects = () => {
       <section className="projects-section" id="projects">
         {projects.map((proj, i) => {
           return (
-            <section className="project">
+            <section className="project" key={proj.title}>
               <a href={proj.deployment} className="proj-title-link">
                 <h3>{proj.title}</h3>
               </a>
-              <a href={proj.deployment}>
-                <Image fluid={proj.gif.fluid} className="screenshot" />
+              <a
+                href={proj.deployment}
+                id={proj.title}
+                className="screenshot"
+                onMouseEnter={updateView}
+                onMouseLeave={revertView}
+              >
+                <Image
+                  fluid={
+                    imageHover[proj.title]
+                      ? proj.gif.fluid
+                      : proj.screenshot.fluid
+                  }
+                  className="screenshot"
+                  id={proj.title}
+                  loading={"eager"}
+                />
               </a>
               <p>{proj.info.info}</p>
               <p>

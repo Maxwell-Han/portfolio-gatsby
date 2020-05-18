@@ -7,7 +7,7 @@ const About = () => {
       id="about"
     >
       <div className="w-100">
-        <h2 className="mb-5">About</h2>
+        <h2 className="mb-5 text-center">About</h2>
         <p>
           I'm a software engineer specializing in React, Node and other JavaScript
           technologies. Before becoming a developer I was a Human Resources and data analytics professional.
