@@ -25,7 +25,7 @@ module.exports = {
     {
       icon: 'far fa-file',
       name: 'Resume',
-      url: '//assets.ctfassets.net/qyqrc6zt88co/7zF1JK2ZMPcpkQCKURPaYt/f178d8bbe5f12addf9280f2fb9a73975/MaxHanResume.pdf',
+      url: '//assets.ctfassets.net/qyqrc6zt88co/7zF1JK2ZMPcpkQCKURPaYt/c9415ed91eed8d02728eaae6cd87b4c4/MaxHanResume.pdf',
     },
     {
       icon: 'far fa-envelope',
