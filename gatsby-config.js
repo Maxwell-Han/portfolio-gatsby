@@ -36,8 +36,14 @@ module.exports = {
       options: {
         spaceId: `qyqrc6zt88co`,
         accessToken: process.env.CONTENT_DELIVERY_API_KEY,
-        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none"
       },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
+        head: true
+      }
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
