@@ -48,7 +48,7 @@ const Projects = () => {
                   }
                   className="screenshot"
                   id={proj.title}
-                  loading={"eager"}
+                  loading={'eager'}
                 />
               </a>
               <p>{proj.info.info}</p>
@@ -70,12 +70,10 @@ const Projects = () => {
 
 export const query = graphql`
   {
-    allContentfulProjects {
+    allContentfulProjects(sort: {fields: priority, order: ASC}) {
       nodes {
+        id
         title
-        info {
-          info
-        }
         tech {
           tech
         }
@@ -84,13 +82,16 @@ export const query = graphql`
             ...GatsbyContentfulFluid_tracedSVG
           }
         }
+        github
+        deployment
+        info {
+          info
+        }
         gif {
           fluid {
             ...GatsbyContentfulFluid_tracedSVG
           }
         }
-        github
-        deployment
       }
     }
   }
