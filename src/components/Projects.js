@@ -97,14 +97,14 @@ export const query = graphql`
 `;
 export default Projects;
 
-{
-  /* <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
-<div>
-  <h3 className="mb-0">{proj.title}</h3>
-  <div className="subheading mb-3">{proj.info.info}</div>
-</div>
-<div className="resume-date text-md-right">
-  <Image fluid={proj.gif.fluid} />
-</div>
-</div> */
-}
+// {
+//   /* <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
+// <div>
+//   <h3 className="mb-0">{proj.title}</h3>
+//   <div className="subheading mb-3">{proj.info.info}</div>
+// </div>
+// <div className="resume-date text-md-right">
+//   <Image fluid={proj.gif.fluid} />
+// </div>
+// </div> */
+// }
