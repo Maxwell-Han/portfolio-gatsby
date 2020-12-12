@@ -78,7 +78,7 @@ export const query = graphql`
         }
         screenshot {
           fluid {
-            ...GatsbyContentfulFluid_tracedSVG
+            ...GatsbyContentfulFluid
           }
         }
         github
@@ -88,7 +88,7 @@ export const query = graphql`
         }
         gif {
           fluid {
-            ...GatsbyContentfulFluid_tracedSVG
+            ...GatsbyContentfulFluid
           }
         }
       }
